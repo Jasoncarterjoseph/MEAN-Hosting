@@ -3,7 +3,7 @@ const path = require('path');
 const CONFIG = require('./config/config');
 
 const PORT =  process.env.PORT || 6000;
-let env = 'development';
+let env = 'production';
 
 const APP = EXPRESS();
 
