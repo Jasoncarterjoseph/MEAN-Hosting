@@ -7,8 +7,8 @@ import { HttpClient } from '@angular/common/http';
 import { ServerResponse } from '../models/server-response.model';
 import { Cart } from '../models/cart.model';
 
-const baseUrl = '/user/cart';
-const getCartSizeEndpoint = '/cart/getSize';
+const baseUrl = 'user/cart';
+const getCartSizeEndpoint = 'cart/getSize';
 const addToCartEndpoint = '/add/';
 const removeFromCartEndpoint = '/delete/';
 const checkoutEndpoint = '/checkout';

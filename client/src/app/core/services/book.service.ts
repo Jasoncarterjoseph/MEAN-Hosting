@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 
 // Models
 import { ServerResponse } from '../models/server-response.model';
-const domain = '/';
+const domain = '';
 const getSingleBookEndpoint = domain + 'book/details/';
 const createBookEndpoint = domain + 'book/add';
 const editBookEndpoint = domain + 'book/edit/';

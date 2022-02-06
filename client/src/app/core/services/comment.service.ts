@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { ServerResponse } from '../models/server-response.model';
 import { BookService } from './book.service';
 
-const baseUrl = '/comment';
+const baseUrl = 'comment';
 const addCommentEndpoint = '/add/';
 const editCommentEndpoint = '/edit/';
 const deleteCommentEndpoint = '/delete/';
