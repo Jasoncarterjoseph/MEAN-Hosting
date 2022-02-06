@@ -1,0 +1,157 @@
+<h1 *ngIf="!isUserAdmin()">Welcome to Curious Minds Book Store</h1>
+<h1 *ngIf="isUserAdmin()">Admin Home Page</h1>
+<form #formDir="ngForm"  [formGroup]="searchForm" (ngSubmit)="onSubmit()" class="example" style="margin:auto;max-width:400px">
+  <input type="text" name="query" placeholder="title, author, genre, ISBN..." formControlName="query">
+  <button type="submit" [disabled]="searchForm.invalid"><i class="fa fa-search"></i></button>
+</form>
+<div *ngIf="mostPurchasedBooks" class="books-home">
+  <div class="panel">
+    <h2>Most Purchased Books</h2>
+  </div>
+  <app-book *ngFor="let book of mostPurchasedBooks" [book]="book"></app-book>
+</div>
+<div *ngIf="bestRatedBooks" class="books-home">
+  <div class="panel">
+    <h2>Best Rated Books</h2>
+  </div>
+  <app-book *ngFor="let book of bestRatedBooks" [book]="book"></app-book>
+</div>
+<div *ngIf="newestBooks" class="books-home">
+  <div class="panel">
+    <h2>Newest Books</h2>
+  </div>
+  <app-book *ngFor="let book of newestBooks" [book]="book"></app-book>
+</div>
+
+<!-- <h1>Welcome to our Book Store</h1>
+<div *ngIf="mostPurchasedBooks" class="books-home">
+  <div class="panel">
+    <h2>Most Purchased </h2>
+  </div>
+  <app-book *ngFor="let book of mostPurchasedBooks" [book]="book"></app-book>
+</div>
+<div *ngIf="bestRatedBooks" class="books-home">
+  <div class="panel">
+    <h2>Best Rated </h2>
+  </div>
+  <app-book *ngFor="let book of bestRatedBooks" [book]="book"></app-book>
+</div>
+<div *ngIf="newestBooks" class="books-home">
+  <div class="panel">
+    <h2>Newest </h2>
+  </div>
+  <app-book *ngFor="let book of newestBooks" [book]="book"></app-book>
+</div> -->
+
+
+<!-- <h1>Welcome to our Book Store</h1>
+<div >
+  <div class="panel">
+    <h2>Most Purchased Books</h2>
+    <div class="top">
+      <div class="books-store">
+        <div class="book-card">
+            <img src="https://m.media-amazon.com/images/I/41gr3r3FSWL.jpg" alt="book-cover">
+            <h5>Book Cover</h5>
+            <h6>Jason Carter</h6>
+            <p>20.18 &#36;</p>
+            <a class="btn btn-primary">View Details</a>
+          </div>
+          <div class="book-card">
+            <img src="https://m.media-amazon.com/images/I/41gr3r3FSWL.jpg" alt="book-cover">
+            <h5>Book Cover</h5>
+            <h6>Jason Carter</h6>
+            <p>20.18 &#36;</p>
+            <a class="btn btn-primary">View Details</a>
+          </div>
+          <div class="book-card">
+            <img src="https://m.media-amazon.com/images/I/41gr3r3FSWL.jpg" alt="book-cover">
+            <h5>Book Cover</h5>
+            <h6>Jason Carter</h6>
+            <p>20.18 &#36;</p>
+            <a class="btn btn-primary">View Details</a>
+          </div>
+          <div class="book-card">
+            <img src="https://m.media-amazon.com/images/I/41gr3r3FSWL.jpg" alt="book-cover">
+            <h5>Book Cover</h5>
+            <h6>Jason Carter</h6>
+            <p>20.18 &#36;</p>
+            <a class="btn btn-primary">View Details</a>
+          </div>
+      </div>
+    </div>
+  </div>
+ 
+</div>
+<div  class="books-home">
+  <div class="panel">
+    <h2>Best Rated Books</h2>
+    <div class="books-store">
+      <div class="book-card">
+          <img src="https://m.media-amazon.com/images/I/41gr3r3FSWL.jpg" alt="book-cover">
+          <h5>Book Cover</h5>
+          <h6>Jason Carter</h6>
+          <p>20.18 &#36;</p>
+          <a class="btn btn-primary">View Details</a>
+        </div>
+        <div class="book-card">
+          <img src="https://m.media-amazon.com/images/I/41gr3r3FSWL.jpg" alt="book-cover">
+          <h5>Book Cover</h5>
+          <h6>Jason Carter</h6>
+          <p>20.18 &#36;</p>
+          <a class="btn btn-primary">View Details</a>
+        </div>
+        <div class="book-card">
+          <img src="https://m.media-amazon.com/images/I/41gr3r3FSWL.jpg" alt="book-cover">
+          <h5>Book Cover</h5>
+          <h6>Jason Carter</h6>
+          <p>20.18 &#36;</p>
+          <a class="btn btn-primary">View Details</a>
+        </div>
+        <div class="book-card">
+          <img src="https://m.media-amazon.com/images/I/41gr3r3FSWL.jpg" alt="book-cover">
+          <h5>Book Cover</h5>
+          <h6>Jason Carter</h6>
+          <p>20.18 &#36;</p>
+          <a class="btn btn-primary">View Details</a>
+        </div>
+    </div>
+  </div>
+
+</div>
+<div  class="books-home">
+  <div class="panel">
+    <h2>Newest Books</h2>
+    <div class="books-store">
+      <div class="book-card">
+          <img src="https://m.media-amazon.com/images/I/41gr3r3FSWL.jpg" alt="book-cover">
+          <h5>Book Cover</h5>
+          <h6>Jason Carter</h6>
+          <p>20.18 &#36;</p>
+          <a class="btn btn-primary">View Details</a>
+        </div>
+        <div class="book-card">
+          <img src="https://m.media-amazon.com/images/I/41gr3r3FSWL.jpg" alt="book-cover">
+          <h5>Book Cover</h5>
+          <h6>Jason Carter</h6>
+          <p>20.18 &#36;</p>
+          <a class="btn btn-primary">View Details</a>
+        </div>
+        <div class="book-card">
+          <img src="https://m.media-amazon.com/images/I/41gr3r3FSWL.jpg" alt="book-cover">
+          <h5>Book Cover</h5>
+          <h6>Jason Carter</h6>
+          <p>20.18 &#36;</p>
+          <a class="btn btn-primary">View Details</a>
+        </div>
+        <div class="book-card">
+          <img src="https://m.media-amazon.com/images/I/41gr3r3FSWL.jpg" alt="book-cover">
+          <h5>Book Cover</h5>
+          <h6>Jason Carter</h6>
+          <p>20.18 &#36;</p>
+          <a class="btn btn-primary">View Details</a>
+        </div>
+    </div>
+  </div>
+  
+</div> -->

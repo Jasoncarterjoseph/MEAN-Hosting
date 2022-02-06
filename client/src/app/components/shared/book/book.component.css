@@ -1,0 +1,106 @@
+.book-card {
+  font-family: Helvetica, sans-serif;
+  border: 2px solid #943d24;
+  display: inline-block;
+  vertical-align: top;
+  margin: 20px;
+  width: 17%;
+  padding: 5px;
+  height: auto;
+}
+
+.book-card img {
+  width: 100%;
+  height: 350px;
+}
+
+.book-card h5 {
+  display: inline-block;
+  font-size: 19px;
+}
+
+.book-card h5, .book-card h6, .book-card p {
+  margin: 10px 10px;
+}
+
+.book-card:hover {
+  background-color: #e4ddf4;
+  border-color: #91A3B0;
+  color: #000;
+}
+
+.btn-info{
+  background-color: #943d24;
+}
+
+@media screen and (max-width: 909px) {
+  .book-card {
+    border: 2px solid #943d24;
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px;
+    width: 25%;
+    padding: 5px;
+  }
+  
+  .book-card img {
+    width: 100%;
+    height: 350px;
+  }
+  
+  .book-card h5 {
+    display: inline-block;
+    font-size: 19px;
+  }
+  
+  .book-card h5, .book-card h6, .book-card p {
+    margin: 10px 10px;
+  }
+  
+  .book-card:hover {
+    background-color: #e4ddf4;
+    border-color: #91A3B0;
+    color: #000;
+  }
+
+  .btn-info{
+    background-color: #943d24;
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 702px) {
+  .book-card {
+    border: 2px solid #943d24;
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px;
+    width: 100%;
+    padding: 5px;
+  }
+  
+  .book-card img {
+    width: 100%;
+    height: 350px;
+  }
+  
+  .book-card h5 {
+    display: inline-block;
+    font-size: 19px;
+  }
+  
+  .book-card h5, .book-card h6, .book-card p {
+    margin: 10px 10px;
+  }
+  
+  .book-card:hover {
+    background-color: #e4ddf4;
+    border-color: #91A3B0;
+    color: #000;
+  }
+
+  .btn-info{
+    background-color: #943d24;
+    padding: 5px;
+  }
+}

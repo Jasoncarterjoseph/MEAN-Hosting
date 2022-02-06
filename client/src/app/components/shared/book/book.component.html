@@ -1,0 +1,17 @@
+<div class="book-card rounded">
+  <img src="{{ book.cover }}" alt="book-cover" />
+  <h5>{{ book.title }}</h5>
+  <h6>{{ book.author }}</h6>
+  <p>&#8377; {{ book.price }}</p>
+  <div>
+    <button (click)="buyBook()" [disabled]="isBought" class="btn btn-success col-sm-8 text-light">
+      <i class="fas fa-shopping-cart"></i>&nbsp; Add To Cart
+    </button>
+  </div>
+
+  <a
+    class="btn btn-info mt-1 col-sm-8"
+    routerLink="/book/details/{{ book._id }}"
+    ><i class="fas fa-info-circle"></i>&nbsp; View More</a
+  >
+</div>

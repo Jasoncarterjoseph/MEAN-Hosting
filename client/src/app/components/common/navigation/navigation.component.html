@@ -1,0 +1,304 @@
+
+
+<!-- <nav class="topnav">
+  <a routerLink="/home">Home</a>
+  <a routerLink="/book/store/default">Book Store</a>
+  <ng-template [ngIf]="isUserLogged()">
+    <a routerLink="/user/profile/mine">My Profile</a>
+    <a routerLink="/user/purchaseHistory">My Purchase History</a>
+    <a *ngIf="isUserAdmin()" routerLink="/book/create">Create Book</a>
+  </ng-template>
+  <div class="search-container">
+    <form #formDir="ngForm" [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+      <input
+        type="text"
+        name="query"
+        placeholder="title, author, genre, ISBN..."
+        formControlName="query"
+      />
+      <button type="submit" [disabled]="searchForm.invalid">
+        <i class="fa fa-search"></i>
+      </button>
+    </form>
+  </div>
+  <div>
+    <ng-template [ngIf]="!isUserLogged()">
+      <a class="menu-item-right" routerLink="/user/register">Register</a>
+      <a class="menu-item-right" routerLink="/user/login">Login</a>
+    </ng-template>
+    <ng-template [ngIf]="isUserLogged()">
+      <a class="menu-item-right" routerLink="/home" (click)="logout()">
+        {{ getUsername() }}
+        <span>Hello, {{ username }}</span> Logout
+      </a>
+      <a class="menu-item-right" routerLink="/user/cart"
+        >Cart ({{ cartItems }})</a
+      >
+    </ng-template>
+  </div>
+</nav> -->
+
+<!-- <nav class="topnav">
+    <a routerLink="/home">Home</a>
+    <a routerLink="/book/store/default">Book Store</a>
+    <ng-template >
+      <a routerLink="/user/profile/mine">My Profile</a>
+      <a routerLink="/user/purchaseHistory">My Purchase History</a>
+      <a  routerLink="/book/create">Create Book</a>
+    </ng-template>
+    <div class="search-container">
+      <form >
+        <input type="text" name="query" placeholder="title, author, genre, ISBN..." formControlName="query" />
+        <button type="submit" ><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+    <div>
+        <a class="menu-item-right" routerLink="/user/register">Register</a>
+        <a class="menu-item-right" routerLink="/user/login">Login</a>
+        <a class="menu-item-right" routerLink="/user/cart">Cart </a>
+    </div>
+    <div>
+      <ng-template >
+        <a class="menu-item-right" routerLink="/user/register">Register</a>
+        <a class="menu-item-right" routerLink="/user/login">Login</a>
+      </ng-template>
+      <ng-template >
+        <a class="menu-item-right" routerLink="/home" (click)="logout()">
+          {{getUsername()}}
+          <span>Hello, {{username}}</span> Logout
+        </a>
+        <a class="menu-item-right" routerLink="/user/cart">Cart ({{cartItems}})</a>
+      </ng-template>
+    </div>
+  </nav> -->
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ 
+  
+
+  <div class="collapse navbar-collapse" [ngClass]="{ show: navbarOpen }">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/home">Home</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/book/store/default">Book Store</a>
+      </li>
+      <li>
+        <ng-template  [ngIf]="isUserLogged()">
+          <a class="nav-link" routerLink="/user/profile/mine">My Profile</a>
+        </ng-template>
+      </li>
+      <li>
+        <ng-template  [ngIf]="isUserLogged()">
+        
+          <a class="nav-link" routerLink="/user/purchaseHistory">My Purchase History</a>
+     
+        </ng-template>
+      </li>
+      <li>
+        <ng-template  [ngIf]="isUserLogged()">
+       
+          <a  class="nav-link" *ngIf="isUserAdmin()" routerLink="/book/create">Create Book</a>
+        </ng-template>
+      </li>
+      <li>
+        <div class="nav-link">
+          <form #formDir="ngForm" [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+            <input type="text" name="query" placeholder="title, author, genre, ISBN..." formControlName="query" />
+            <button type="submit" [disabled]="searchForm.invalid"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav> -->
+<!-- <nav class="topnav navbar navbar-expand-md ">
+  <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+    <i class="fa fa-bars" aria-hidden="true"></i>
+  </button>
+  <div
+    class="navbar-collapse collapse justify-content-stretch"
+    id="navbar6"
+    [ngClass]="{ show: navbarOpen }"
+  >
+    <ul class="navbar-nav">
+      <li class="nav-item " >
+        <a class="nav-link " routerLinkActive="active" routerLink="/home">Home</a>
+      </li>
+      <li class="nav-item" >
+        <a class="nav-link" routerLinkActive="active" routerLink="/book/store/default">Book Store</a>
+      </li>
+      <li class="nav-item" >
+        <ng-template [ngIf]="isUserLogged()">
+          <a class="nav-link" routerLinkActive="active" routerLink="/user/profile/mine">My Profile</a>
+        </ng-template>
+      </li>
+      <li class="nav-item" >
+        <ng-template [ngIf]="isUserLogged()">
+          <a class="nav-link" routerLinkActive="active" routerLink="/user/purchaseHistory"
+            >My Purchase History</a
+          >
+        </ng-template>
+      </li>
+      <li class="nav-item" >
+        <ng-template [ngIf]="isUserLogged()">
+          <a class="nav-link" routerLinkActive="active" *ngIf="isUserAdmin()" routerLink="/book/create"
+            >Create Book</a
+          >
+        </ng-template>
+      </li>
+      <li class="nav-item">
+        <form class="nav-link search-container" #formDir="ngForm" [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+          <input type="text" name="query" placeholder="title, author, genre, ISBN..." formControlName="query" />
+          <button type="submit" [disabled]="searchForm.invalid"><i class="fa fa-search"></i></button>
+        </form>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+     
+      <li class="nav-item" >
+        <ng-template [ngIf]="isUserLogged()">
+          <a class="nav-link" routerLinkActive="active" routerLink="/user/cart">Cart ({{cartItems}})</a>
+        </ng-template>
+      </li>
+      <li class="nav-item" >
+        <ng-template [ngIf]="isUserLogged()">
+          <a class="nav-link" routerLinkActive="active"  routerLink="/user/login" (click)="logout()">
+            {{getUsername()}}
+            <span>Hello, {{username}}</span> Logout
+          </a>
+  
+        </ng-template>
+      </li>
+      <li class="nav-item" >
+        <ng-template [ngIf]="!isUserLogged()">
+          <a class="nav-link" routerLinkActive="active"  routerLink="/user/login">Login</a>
+        </ng-template>
+      </li>
+      <li class="nav-item" >
+        <ng-template [ngIf]="!isUserLogged()">
+          <a class="nav-link" routerLinkActive="active" routerLink="/user/register">Register</a>
+        </ng-template>
+      </li>
+    </ul>
+  </div>
+</nav> -->
+
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div
+    class="collapse navbar-collapse"
+    id="navbarSupportedContent"
+    [ngClass]="{ show: navbarOpen }"
+  >
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/home">Home</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/book/store/default">Book Store</a>
+      </li>
+      <li class="nav-item">
+        <ng-template [ngIf]="isUserLogged()">
+          <a class="nav-link" routerLink="/user/profile/mine">My Profile</a>
+        </ng-template>
+      </li>
+      <li class="nav-item" >
+        <ng-template [ngIf]="isUserLogged()">
+          <a class="nav-link" routerLink="/user/purchaseHistory"
+            >My Purchase History</a
+          >
+        </ng-template>
+      </li>
+      <li class="nav-item ">
+        <ng-template [ngIf]="isUserLogged()">
+          <a class="nav-link" *ngIf="isUserAdmin()" routerLink="/book/create"
+            >Create Book</a
+          >
+        </ng-template>
+      </li>
+      <form class="form-inline my-2 my-lg-0" #formDir="ngForm" [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+        <input type="text" name="query" placeholder="title, author, genre, ISBN..." formControlName="query" />
+        <button type="submit" [disabled]="searchForm.invalid"><i class="fa fa-search"></i></button>
+      </form>
+    </ul>
+
+  </div>
+</nav> -->
+<nav class="topnav navbar navbar-expand-md ">
+  <div class="navbar-brand"><img style="width: 100px; height: 50px; margin-right: 100px;" src="https://curiousminds.org.uk/wp-content/uploads/2016/05/Curious-Minds-MAIN-LOGO486.png" alt="Image text"></div>
+  <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+    <i class="fa fa-bars" aria-hidden="true"></i>
+  </button>
+  <div
+    class="navbar-collapse collapse justify-content-stretch"
+    id="navbar6"
+    [ngClass]="{ show: navbarOpen }"
+  >
+    <ul class="navbar-nav">
+      <li class="nav-item " routerLinkActive="active" >
+        <a class="nav-link " routerLinkActive="active" routerLink="/home">Home</a>
+      </li>
+      <li class="nav-item" >
+        <a class="nav-link" routerLinkActive="active" routerLink="/book/store/default">Book Store</a>
+      </li>
+      <li class="nav-item" >
+        <ng-template [ngIf]="isUserLogged()">
+          <a class="nav-link" routerLinkActive="active" routerLink="/user/profile/mine">My Profile</a>
+        </ng-template>
+      </li>
+      <li class="nav-item" >
+        <ng-template [ngIf]="isUserLogged()">
+          <a class="nav-link" routerLinkActive="active" routerLink="/user/purchaseHistory"
+            >My Purchase History</a
+          >
+        </ng-template>
+      </li>
+      <li class="nav-item" >
+        <ng-template [ngIf]="isUserLogged()">
+          <a class="nav-link" routerLinkActive="active" *ngIf="isUserAdmin()" routerLink="/book/create"
+            >Create Book</a
+          >
+        </ng-template>
+      </li>
+      <!-- <li class="nav-item">
+        <form class="nav-link search-container" #formDir="ngForm" [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+          <input type="text" name="query" placeholder="title, author, genre, ISBN..." formControlName="query" />
+          <button type="submit" [disabled]="searchForm.invalid"><i class="fa fa-search"></i></button>
+        </form>
+      </li> -->
+    </ul>
+    <ul class="navbar-nav ml-auto">
+     
+      <li class="nav-item" >
+        <ng-template [ngIf]="isUserLogged()">
+          <a class="nav-link" routerLinkActive="active" routerLink="/user/cart">Cart ({{cartItems}})</a>
+        </ng-template>
+      </li>
+      <li class="nav-item" >
+        <ng-template [ngIf]="isUserLogged()">
+          <a class="nav-link" routerLinkActive="active"  routerLink="/user/login" (click)="logout()">
+            {{getUsername()}}
+            <span>Hello, {{username}}</span> Logout
+          </a>
+  
+        </ng-template>
+      </li>
+      <li class="nav-item" >
+        <ng-template [ngIf]="!isUserLogged()">
+          <a class="nav-link" routerLinkActive="active"  routerLink="/user/login">Login</a>
+        </ng-template>
+      </li>
+      <li class="nav-item" >
+        <ng-template [ngIf]="!isUserLogged()">
+          <a class="nav-link" routerLinkActive="active" routerLink="/user/register">Register</a>
+        </ng-template>
+      </li>
+    </ul>
+  </div>
+</nav>
+

@@ -1,0 +1,72 @@
+#profile {
+  font-family: 'Trebuchet MS', sans-serif;
+    margin-top: 40px !important;
+  }
+  
+  #avatar {
+    width: 150px;
+    height: 150px;
+  }
+  
+  #avatar-input {
+    width: 50%;
+    margin: 10px auto;
+  }
+  
+  .admin-panel button {
+    margin-left: 5px;
+  }
+  
+  .favorite-books {
+    font-family: 'Trebuchet MS', sans-serif;
+    margin-bottom: 30px;
+  }
+  
+  .favorite-books h2 {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  .no-favorite {
+    margin-bottom: 11.6em;
+  }
+  .books-store {
+    margin: 30px auto;
+  }
+  
+  .top {
+    margin-top: 50px;
+  }
+  
+  .bottom {
+    margin-bottom: 50px;
+  }
+
+  .book-card {
+    border: 5px solid transparent;
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px;
+    width: 15%;
+  }
+  
+  .book-card img {
+    width: 80%;
+    height: 400px;
+  }
+  
+  .book-card h5 {
+    display: inline-block;
+    font-size: 19px;
+  }
+  
+  .book-card h5, .book-card h6, .book-card p {
+    margin: 10px 10px;
+  }
+  
+  .book-card:hover {
+    background-color: #91A3B0;
+    border-color: #91A3B0;
+    color: #000;
+  }

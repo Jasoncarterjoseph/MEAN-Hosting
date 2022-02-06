@@ -1,0 +1,143 @@
+h1 {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 50px;
+  color: rgb(17, 16, 16);
+}
+
+form{
+  margin-top: 300px;
+}
+
+.books-home {
+  
+  margin: 30px auto;
+}
+
+.panel h2 {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-left: 145px;
+  text-align: left;
+}
+
+#profile {
+  margin-top: 40px !important;
+}
+
+#avatar {
+  width: 150px;
+  height: 150px;
+}
+
+#avatar-input {
+  width: 50%;
+  margin: 10px auto;
+}
+
+.admin-panel button {
+  margin-left: 5px;
+}
+
+.favorite-books {
+  margin-bottom: 30px;
+}
+
+.favorite-books h2 {
+  font-family: "Wendy One", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.no-favorite {
+  margin-bottom: 11.6em;
+}
+.books-store {
+  margin: 30px auto;
+}
+
+.top {
+  margin-top: 50px;
+}
+
+.bottom {
+  margin-bottom: 50px;
+}
+
+.book-card {
+  border: 5px solid transparent;
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px;
+  width: 15%;
+}
+
+.book-card img {
+  width: 80%;
+  height: 400px;
+}
+
+.book-card h5 {
+  display: inline-block;
+  font-size: 19px;
+}
+
+.book-card h5,
+.book-card h6,
+.book-card p {
+  margin: 10px 10px;
+}
+
+.book-card:hover {
+  background-color: #6e7072;
+  border-color: #515152;
+  color: #000;
+}
+@media screen and (max-width: 547px) {
+  h1 {
+    display: block;
+    margin-left: 70px;
+  }
+
+  h2 {
+    text-align: left;
+    margin-right: 20px;
+  }
+}
+
+
+form.example input[type=text] {
+  
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #515152;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
