@@ -11,9 +11,10 @@ require('./config/database.config')(CONFIG[env]);
 require('./config/express')(APP);
 require('./config/routes')(APP);
 
-if(process.env.NODE_ENV==='production'){
-    APP.use(EXPRESS.static('../client/dist/online-book-store'))
-}
+APP.use(EXPRESS.static(path.join(__dirname, 'public')));
+APP.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/index.html'));
+  });
 
 APP.listen(PORT);
 console.log(`Server is listening on port ${PORT}`);
