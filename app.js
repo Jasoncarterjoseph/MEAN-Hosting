@@ -1,5 +1,5 @@
 const EXPRESS = require('express');
-
+const path = require('path');
 const CONFIG = require('./config/config');
 
 const PORT =  process.env.PORT || 6000;
