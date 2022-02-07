@@ -3,7 +3,7 @@ const MONGOOSE = require("mongoose");
 MONGOOSE.Promise = global.Promise;
 
 module.exports = (config) => {
-  MONGOOSE.connect( config.connectionString);
+  MONGOOSE.connect(process.env.MONGODB_URI || config.connectionString);
 
   let db = MONGOOSE.connection;
 
